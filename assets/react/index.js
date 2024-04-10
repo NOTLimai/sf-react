@@ -1,8 +1,11 @@
 import React from "react";
-import * as ReactDOM from "react-dom";
+import {createRoot} from "react-dom/client";
+import App from "./component/App";
 
-ReactDOM.render (
-    <h1>Hello World Symfony i'm React !</h1>,
-
-    document.getElementById("app")
+const container = document.getElementById('app');
+const root = createRoot(container);
+root.render (
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
